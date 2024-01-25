@@ -1,0 +1,63 @@
+.container {
+  height: 450px;
+  width: 400px;
+  perspective: 500px;
+  position: relative;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: all 2s ease-in-out;
+}
+
+.card .back {
+  backface-visibility: hidden;
+  color: white;
+  transform: rotateY(180deg);
+  background: rgb(2, 0, 36);
+}
+
+.img {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out 1.1s;
+}
+
+.card:hover .img {
+  transform: translate(-400px, 0px);
+}
+
+.text {
+	backface-visibility: hidden;
+  font-size: 2px;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out 1.1s;
+  transform-origin: 50% 0%;
+}
+
+.card:hover .text {
+  transform: scale(9);
+}
+
+
+
+
+
+
+
